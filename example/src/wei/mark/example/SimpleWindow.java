@@ -1,5 +1,4 @@
 package wei.mark.example;
-
 import wei.mark.standout.StandOutWindow;
 import wei.mark.standout.constants.StandOutFlags;
 import wei.mark.standout.ui.Window;
@@ -10,12 +9,7 @@ import android.widget.FrameLayout;
 public class SimpleWindow extends StandOutWindow {
 	@Override
 	public String getAppName() {
-		return "ODWBO";
-	}
-
-	@Override
-	public String getPersistentNotificationTitle(int id) {
-		return getAppName() + " 运行中...";
+		return "SimpleWindow";
 	}
 
 	@Override
@@ -33,18 +27,21 @@ public class SimpleWindow extends StandOutWindow {
 	// the window will be centered
 	@Override
 	public StandOutLayoutParams getParams(int id, Window window) {
-		return new StandOutLayoutParams(id, 710, 200, StandOutLayoutParams.CENTER, StandOutLayoutParams.BOTTOM);
+		return new StandOutLayoutParams(id, 1600, 325, StandOutLayoutParams.CENTER, StandOutLayoutParams.CENTER);
 	}
 
 	// move the window by dragging the view
 	@Override
 	public int getFlags(int id) {
-		return super.getFlags(id) | StandOutFlags.FLAG_WINDOW_FOCUSABLE_DISABLE;
+		return super.getFlags(id) 
+				|StandOutFlags.FLAG_BODY_MOVE_ENABLE 
+				| StandOutFlags.FLAG_WINDOW_FOCUSABLE_DISABLE
+				;
 	}
 
 	@Override
 	public String getPersistentNotificationMessage(int id) {
-		return "点击关闭";
+		return "Click to close the SimpleWindow";
 	}
 
 	@Override
