@@ -3,13 +3,14 @@
 	android:layout_width="fill_parent"
 	android:layout_height="fill_parent"
 	android:background="#202227"
-	android:orientation="horizontal"
-	android:padding="8dp" >
+	android:gravity="center"
+	android:orientation="horizontal" >
 	<ImageView
 		android:layout_width="fill_parent"
 		android:layout_height="fill_parent"
 		android:layout_weight="1"
-		android:src="@drawable/ic_launcher" />
+		android:padding="10dp"
+		android:src="@drawable/phone" />
 	<View
 		android:layout_width="2px"
 		android:layout_height="fill_parent"
@@ -22,7 +23,8 @@
 		android:layout_width="fill_parent"
 		android:layout_height="fill_parent"
 		android:layout_weight="1"
-		android:src="@drawable/ic_launcher" />
+		android:padding="10dp"
+		android:src="@drawable/message" />
 	<View
 		android:layout_width="2px"
 		android:layout_height="fill_parent"
@@ -35,7 +37,8 @@
 		android:layout_width="fill_parent"
 		android:layout_height="fill_parent"
 		android:layout_weight="1"
-		android:src="@drawable/ic_launcher" />
+		android:padding="10dp"
+		android:src="@drawable/photo" />
 	<View
 		android:layout_width="2px"
 		android:layout_height="fill_parent"
@@ -48,7 +51,8 @@
 		android:layout_width="fill_parent"
 		android:layout_height="fill_parent"
 		android:layout_weight="1"
-		android:src="@drawable/ic_launcher" />
+		android:padding="10dp"
+		android:src="@drawable/user" />
 	<View
 		android:layout_width="2px"
 		android:layout_height="fill_parent"
@@ -61,5 +65,19 @@
 		android:layout_width="fill_parent"
 		android:layout_height="fill_parent"
 		android:layout_weight="1"
-		android:src="@drawable/ic_launcher" />
+		android:padding="10dp" />
+	<View
+		android:layout_width="2px"
+		android:layout_height="fill_parent"
+		android:background="#161617" />
+	<View
+		android:layout_width="2px"
+		android:layout_height="fill_parent"
+		android:background="#3b3e40" />
+	<ImageView
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:layout_weight="1"
+		android:background="#10247a"
+		android:src="@drawable/odwbo" />
 </LinearLayout>

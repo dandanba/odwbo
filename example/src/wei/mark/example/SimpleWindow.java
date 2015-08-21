@@ -1,4 +1,5 @@
 package wei.mark.example;
+
 import wei.mark.standout.StandOutWindow;
 import wei.mark.standout.constants.StandOutFlags;
 import wei.mark.standout.ui.Window;
@@ -9,12 +10,17 @@ import android.widget.FrameLayout;
 public class SimpleWindow extends StandOutWindow {
 	@Override
 	public String getAppName() {
-		return "SimpleWindow";
+		return "odwbo";
+	}
+
+	@Override
+	public String getPersistentNotificationTitle(int id) {
+		return getAppName() + "运行中...";
 	}
 
 	@Override
 	public int getAppIcon() {
-		return android.R.drawable.ic_menu_close_clear_cancel;
+		return R.drawable.odwbo_icon;
 	}
 
 	@Override
@@ -26,22 +32,19 @@ public class SimpleWindow extends StandOutWindow {
 
 	// the window will be centered
 	@Override
-	public StandOutLayoutParams getParams(int id, Window window) {
-		return new StandOutLayoutParams(id, 1600, 325, StandOutLayoutParams.CENTER, StandOutLayoutParams.CENTER);
+	public StandOutLayoutParams getParams(int id, Window window) {// for samsung t900
+		return new StandOutLayoutParams(id, 1600, 325, StandOutLayoutParams.CENTER, 2560 - 325 - 50);
 	}
 
 	// move the window by dragging the view
 	@Override
 	public int getFlags(int id) {
-		return super.getFlags(id) 
-				|StandOutFlags.FLAG_BODY_MOVE_ENABLE 
-				| StandOutFlags.FLAG_WINDOW_FOCUSABLE_DISABLE
-				;
+		return super.getFlags(id) | StandOutFlags.FLAG_BODY_MOVE_ENABLE | StandOutFlags.FLAG_WINDOW_FOCUSABLE_DISABLE;
 	}
 
 	@Override
 	public String getPersistentNotificationMessage(int id) {
-		return "Click to close the SimpleWindow";
+		return "点击关闭";
 	}
 
 	@Override
