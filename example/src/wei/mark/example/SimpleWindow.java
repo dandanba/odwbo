@@ -39,7 +39,7 @@ public class SimpleWindow extends StandOutWindow {
 	// move the window by dragging the view
 	@Override
 	public int getFlags(int id) {
-		return super.getFlags(id) | StandOutFlags.FLAG_BODY_MOVE_ENABLE | StandOutFlags.FLAG_WINDOW_FOCUSABLE_DISABLE;
+		return super.getFlags(id) | StandOutFlags.FLAG_BODY_MOVE_ENABLE | StandOutFlags.FLAG_ADD_FUNCTIONALITY_ALL_DISABLE;
 	}
 
 	@Override
